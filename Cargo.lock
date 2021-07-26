@@ -83,8 +83,8 @@ dependencies = [
  "log",
  "mime",
  "percent-encoding",
- "pin-project 1.0.1",
- "rand",
+ "pin-project 1.0.8",
+ "rand 0.7.3",
  "regex",
  "serde",
  "serde_json",
@@ -251,7 +251,7 @@ dependencies = [
  "fxhash",
  "log",
  "mime",
- "pin-project 1.0.1",
+ "pin-project 1.0.8",
  "regex",
  "serde",
  "serde_json",
@@ -282,7 +282,7 @@ dependencies = [
  "actix-http",
  "actix-web",
  "futures",
- "opentelemetry",
+ "opentelemetry 0.8.0",
  "serde",
 ]
 
@@ -539,7 +539,7 @@ dependencies = [
  "async-io",
  "async-mutex",
  "blocking",
- "crossbeam-utils",
+ "crossbeam-utils 0.7.2",
  "futures-channel",
  "futures-core",
  "futures-io",
@@ -614,7 +614,7 @@ dependencies = [
  "log",
  "mime",
  "percent-encoding",
- "rand",
+ "rand 0.7.3",
  "serde",
  "serde_json",
  "serde_urlencoded 0.6.1",
@@ -685,9 +685,9 @@ checksum = "682fe6f1bba53f74f33041020587426fd66af85b5d7b600ddb673930eb531815"
 dependencies = [
  "arrayvec",
  "bastion-utils",
- "crossbeam-channel",
+ "crossbeam-channel 0.4.4",
  "crossbeam-epoch",
- "crossbeam-utils",
+ "crossbeam-utils 0.7.2",
  "futures-timer",
  "lazy_static",
  "libc",
@@ -705,10 +705,10 @@ checksum = "21c8b3a9fe5089b4b199df2f35b76860bf594db01d1a24505146f80d8ca4b07f"
 dependencies = [
  "arrayvec",
  "bastion-utils",
- "crossbeam-channel",
+ "crossbeam-channel 0.4.4",
  "crossbeam-epoch",
  "crossbeam-queue",
- "crossbeam-utils",
+ "crossbeam-utils 0.7.2",
  "futures-timer",
  "lazy_static",
  "lever",
@@ -958,7 +958,7 @@ dependencies = [
  "hkdf",
  "hmac",
  "percent-encoding",
- "rand",
+ "rand 0.7.3",
  "sha2",
  "time 0.2.22",
  "version_check",
@@ -1023,8 +1023,18 @@ version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b153fe7cbef478c567df0f972e02e6d736db11affe43dfc9c56a9374d1adfb87"
 dependencies = [
- "crossbeam-utils",
+ "crossbeam-utils 0.7.2",
  "maybe-uninit",
+]
+
+[[package]]
+name = "crossbeam-channel"
+version = "0.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "06ed27e177f16d65f0f0c22a213e17c696ace5dd64b14258b52f9417ccb52db4"
+dependencies = [
+ "cfg-if 1.0.0",
+ "crossbeam-utils 0.8.5",
 ]
 
 [[package]]
@@ -1035,7 +1045,7 @@ checksum = "058ed274caafc1f60c4997b5fc07bf7dc7cca454af7c6e81edffe5f33f70dace"
 dependencies = [
  "autocfg",
  "cfg-if 0.1.10",
- "crossbeam-utils",
+ "crossbeam-utils 0.7.2",
  "lazy_static",
  "maybe-uninit",
  "memoffset",
@@ -1049,7 +1059,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "774ba60a54c213d409d5353bda12d49cd68d14e45036a285234c8d6f91f92570"
 dependencies = [
  "cfg-if 0.1.10",
- "crossbeam-utils",
+ "crossbeam-utils 0.7.2",
  "maybe-uninit",
 ]
 
@@ -1061,6 +1071,16 @@ checksum = "c3c7c73a2d1e9fc0886a08b93e98eb643461230d5f1925e4036204d5f2e261a8"
 dependencies = [
  "autocfg",
  "cfg-if 0.1.10",
+ "lazy_static",
+]
+
+[[package]]
+name = "crossbeam-utils"
+version = "0.8.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d82cfc11ce7f2c3faef78d8a684447b40d503d9681acebed6cb728d45940c4db"
+dependencies = [
+ "cfg-if 1.0.0",
  "lazy_static",
 ]
 
@@ -1450,7 +1470,7 @@ dependencies = [
  "futures-sink",
  "futures-task",
  "memchr",
- "pin-project 1.0.1",
+ "pin-project 1.0.8",
  "pin-utils",
  "proc-macro-hack",
  "proc-macro-nested",
@@ -1508,6 +1528,17 @@ dependencies = [
  "cfg-if 0.1.10",
  "libc",
  "wasi 0.9.0+wasi-snapshot-preview1",
+]
+
+[[package]]
+name = "getrandom"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7fcd999463524c52659517fe2cea98493cfe485d10565e7b0fb07dbba7ad2753"
+dependencies = [
+ "cfg-if 1.0.0",
+ "libc",
+ "wasi 0.10.0+wasi-snapshot-preview1",
 ]
 
 [[package]]
@@ -1675,7 +1706,7 @@ dependencies = [
  "http",
  "infer",
  "pin-project-lite",
- "rand",
+ "rand 0.7.3",
  "serde",
  "serde_json",
  "serde_qs",
@@ -1726,7 +1757,7 @@ dependencies = [
  "httparse",
  "httpdate",
  "itoa",
- "pin-project 1.0.1",
+ "pin-project 1.0.8",
  "socket2",
  "tokio",
  "tower-service",
@@ -1908,7 +1939,7 @@ version = "0.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ebf7c202c4da35d579058d845fad7b62d3aff5fcb10c5a57fc175ac632874de0"
 dependencies = [
- "crossbeam-utils",
+ "crossbeam-utils 0.7.2",
  "pin-utils",
 ]
 
@@ -2221,7 +2252,24 @@ dependencies = [
  "percent-encoding",
  "pin-project 0.4.27",
  "prometheus",
- "rand",
+ "rand 0.7.3",
+]
+
+[[package]]
+name = "opentelemetry"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ff27b33e30432e7b9854936693ca103d8591b0501f7ae9f633de48cda3bf2a67"
+dependencies = [
+ "async-trait",
+ "crossbeam-channel 0.5.1",
+ "futures",
+ "js-sys",
+ "lazy_static",
+ "percent-encoding",
+ "pin-project 1.0.8",
+ "rand 0.8.4",
+ "thiserror",
 ]
 
 [[package]]
@@ -2230,7 +2278,7 @@ version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "02a885963fd184822847d08527f3d53164a9fb6f770ceae61ea9388dc208690b"
 dependencies = [
- "opentelemetry",
+ "opentelemetry 0.8.0",
  "thrift",
  "ureq",
 ]
@@ -2344,11 +2392,11 @@ dependencies = [
 
 [[package]]
 name = "pin-project"
-version = "1.0.1"
+version = "1.0.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ee41d838744f60d959d7074e3afb6b35c7456d0f61cad38a24e35e6553f73841"
+checksum = "576bc800220cc65dac09e99e97b08b358cfab6e17078de8dc5fee223bd2d0c08"
 dependencies = [
- "pin-project-internal 1.0.1",
+ "pin-project-internal 1.0.8",
 ]
 
 [[package]]
@@ -2364,9 +2412,9 @@ dependencies = [
 
 [[package]]
 name = "pin-project-internal"
-version = "1.0.1"
+version = "1.0.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "81a4ffa594b66bff340084d4081df649a7dc049ac8d7fc458d8e628bfbbb2f86"
+checksum = "6e8fe8163d14ce7f0cdac2e040116f22eac817edabff0be91e8aff7e9accf389"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2470,9 +2518,9 @@ checksum = "eba180dafb9038b050a4c280019bbedf9f2467b61e5d892dcad585bb57aadc5a"
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.24"
+version = "1.0.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1e0704ee1a7e00d7bb417d0770ea303c1bccbabf0ef1667dae92b5967f5f8a71"
+checksum = "5c7ed8b8c7b886ea3ed7dde405212185f423ab44682667c8c6dd14aa1d9f6612"
 dependencies = [
  "unicode-xid",
 ]
@@ -2552,11 +2600,23 @@ version = "0.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6a6b1679d49b24bbfe0c803429aa1874472f50d9b363131f0e89fc356b544d03"
 dependencies = [
- "getrandom",
+ "getrandom 0.1.15",
  "libc",
- "rand_chacha",
- "rand_core",
- "rand_hc",
+ "rand_chacha 0.2.2",
+ "rand_core 0.5.1",
+ "rand_hc 0.2.0",
+]
+
+[[package]]
+name = "rand"
+version = "0.8.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2e7573632e6454cf6b99d7aac4ccca54be06da05aca2ef7423d22d27d4d4bcd8"
+dependencies = [
+ "libc",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.3",
+ "rand_hc 0.3.1",
 ]
 
 [[package]]
@@ -2566,7 +2626,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f4c8ed856279c9737206bf725bf36935d8666ead7aa69b52be55af369d193402"
 dependencies = [
  "ppv-lite86",
- "rand_core",
+ "rand_core 0.5.1",
+]
+
+[[package]]
+name = "rand_chacha"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88"
+dependencies = [
+ "ppv-lite86",
+ "rand_core 0.6.3",
 ]
 
 [[package]]
@@ -2575,7 +2645,16 @@ version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "90bde5296fc891b0cef12a6d03ddccc162ce7b2aff54160af9338f8d40df6d19"
 dependencies = [
- "getrandom",
+ "getrandom 0.1.15",
+]
+
+[[package]]
+name = "rand_core"
+version = "0.6.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d34f1408f55294453790c48b2f1ebbb1c5b4b7563eb1f418bcfcfdbb06ebb4e7"
+dependencies = [
+ "getrandom 0.2.3",
 ]
 
 [[package]]
@@ -2584,7 +2663,16 @@ version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ca3129af7b92a17112d59ad498c6f81eaf463253766b90396d39ea7a39d6613c"
 dependencies = [
- "rand_core",
+ "rand_core 0.5.1",
+]
+
+[[package]]
+name = "rand_hc"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d51e9f596de227fda2ea6c84607f5558e196eeaf43c986b724ba4fb8fdf497e7"
+dependencies = [
+ "rand_core 0.6.3",
 ]
 
 [[package]]
@@ -2982,7 +3070,7 @@ dependencies = [
  "env_logger 0.8.1",
  "futures",
  "http",
- "opentelemetry",
+ "opentelemetry 0.8.0",
  "opentelemetry-jaeger",
  "thrift",
  "tracing",
@@ -3087,9 +3175,9 @@ checksum = "343f3f510c2915908f155e94f17220b19ccfacf2a64a2a5d8004f2c3e311e7fd"
 
 [[package]]
 name = "syn"
-version = "1.0.48"
+version = "1.0.74"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cc371affeffc477f42a221a1e4297aedcea33d47d19b61455588bd9d8f6b19ac"
+checksum = "1873d832550d4588c3dbc20f01361ab00bfe741048f71e3fecf145a7cc18b29c"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3104,7 +3192,7 @@ checksum = "7a6e24d9338a0a5be79593e2fa15a648add6138caa803e2d5bc782c371732ca9"
 dependencies = [
  "cfg-if 0.1.10",
  "libc",
- "rand",
+ "rand 0.7.3",
  "redox_syscall",
  "remove_dir_all",
  "winapi 0.3.9",
@@ -3427,12 +3515,11 @@ dependencies = [
 
 [[package]]
 name = "tracing-opentelemetry"
-version = "0.7.0"
+version = "0.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7c776834eab0d599523cc58accac54f32e1f8d2cea1dbcae157f28e279de7004"
+checksum = "c47440f2979c4cd3138922840eec122e3c0ba2148bc290f756bd7fd60fc97fff"
 dependencies = [
- "opentelemetry",
- "rand",
+ "opentelemetry 0.15.0",
  "tracing",
  "tracing-core",
  "tracing-log",
@@ -3484,7 +3571,7 @@ dependencies = [
  "idna",
  "lazy_static",
  "log",
- "rand",
+ "rand 0.7.3",
  "smallvec",
  "thiserror",
  "tokio",
@@ -3641,7 +3728,7 @@ version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9fde2f6a4bea1d6e007c4ad38c6839fa71cbb63b6dbf5b595aa38dc9b1093c11"
 dependencies = [
- "rand",
+ "rand 0.7.3",
 ]
 
 [[package]]
